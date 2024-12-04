@@ -47,4 +47,11 @@ public class StringCalculatorTests
         int result = _calculator.Add("1\n2,3");
         Assert.Equal(6, result);
     }
+
+    [Fact]
+    public void Add_CustomDelimiter_ReturnsSum()
+    {
+        int result = _calculator.Add("//;\n1;2");
+        Assert.Equal(3, result);
+    }
 }
