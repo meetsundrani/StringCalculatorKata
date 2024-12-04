@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StringCalculatorKata")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aaf7aa1f3ce7f33c06827f290ff4fbfbffab2e6a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c61a02f05c97fc339136f7c508d2ce24a1b2619")]
 [assembly: System.Reflection.AssemblyProductAttribute("StringCalculatorKata")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StringCalculatorKata")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
