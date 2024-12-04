@@ -26,4 +26,11 @@ public class StringCalculatorTests
         int result = _calculator.Add("1");
         Assert.Equal(1, result);
     }
+
+    [Fact]
+    public void Add_TwoNumbers_ReturnsSum()
+    {
+        int result = _calculator.Add("1,5");
+        Assert.Equal(6, result);
+    }
 }
