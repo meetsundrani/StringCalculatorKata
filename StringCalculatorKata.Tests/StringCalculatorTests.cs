@@ -33,4 +33,11 @@ public class StringCalculatorTests
         int result = _calculator.Add("1,5");
         Assert.Equal(6, result);
     }
+
+    [Fact]
+    public void Add_MultipleNumbers_ReturnsSum()
+    {
+        int result = _calculator.Add("1,2,3,4");
+        Assert.Equal(10, result);
+    }
 }
