@@ -1,15 +1,21 @@
-﻿namespace StringCalculatorKata{
-public class StringCalculator
+﻿namespace StringCalculatorKata
 {
-    public int Add(string numbers)
+    public class StringCalculator
     {
-        if (string.IsNullOrEmpty(numbers))
+        public int Add(string numbers)
+        {
+            if (string.IsNullOrEmpty(numbers))
+            {
                 return 0;
-            
-         return 0;
-    }
+            }
 
-}
+
+            var parsedNumber = int.Parse(numbers);
+
+            return parsedNumber;
+        }
+
+    }
 
 }
 
