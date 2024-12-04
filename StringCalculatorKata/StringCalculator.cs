@@ -9,12 +9,18 @@
                 return 0;
             }
 
-
             var delimiter = ",";
-            var parsedNumbers = numbers
+            var numberString = numbers;
+
+            
+            // Replace newlines with delimiter
+            numberString = numberString.Replace("\n", delimiter);
+
+            var parsedNumbers = numberString
                 .Split(delimiter)
                 .Select(n => int.Parse(n.Trim()))
                 .ToList();
+                
             return parsedNumbers.Sum();
         }
 
