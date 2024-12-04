@@ -28,10 +28,15 @@
                 .Select(n => int.Parse(n.Trim()))
                 .ToList();
 
+            // Check for negative numbers
+            var negatives = parsedNumbers.Where(n => n < 0).ToList();
+            if (negatives.Any())
+            {
+                throw new ArgumentException(
+                    $"Negative numbers not allowed: {string.Join(", ", negatives)}");
+            }
+
             return parsedNumbers.Sum();
         }
-
     }
-
 }
-
