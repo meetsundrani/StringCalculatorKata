@@ -19,4 +19,11 @@ public class StringCalculatorTests
         int result = _calculator.Add("");
         Assert.Equal(0, result);
     }
+
+    [Fact]
+    public void Add_SingleNumber_ReturnsSameNumber()
+    {
+        int result = _calculator.Add("1");
+        Assert.Equal(1, result);
+    }
 }
