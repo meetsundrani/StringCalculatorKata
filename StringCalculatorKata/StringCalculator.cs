@@ -10,9 +10,12 @@
             }
 
 
-            var parsedNumber = int.Parse(numbers);
-
-            return parsedNumber;
+            var delimiter = ",";
+            var parsedNumbers = numbers
+                .Split(delimiter)
+                .Select(n => int.Parse(n.Trim()))
+                .ToList();
+            return parsedNumbers.Sum();
         }
 
     }
