@@ -61,4 +61,20 @@ public class StringCalculatorTests
         var ex = Assert.Throws<ArgumentException>(() => _calculator.Add("-1,2,-3"));
         Assert.Equal("Negative numbers not allowed: -1, -3", ex.Message);
     }
+
+    [Fact]
+    public void Add_CustomDelimiter_With_Default_ReturnsSum()
+    {
+        int result = _calculator.Add("//;\n1;2,6");
+        Assert.Equal(9, result);
+    }
+
+    [Fact]
+    public void Ignore_GreaterThen_Thousand_ReturnsSum()
+    {
+        int result = _calculator.Add("1,2,1000,2000");
+        Assert.Equal(3, result);
+    }
 }
+
+// var str = "1,2,1000,2000"
